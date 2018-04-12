@@ -3,8 +3,8 @@ import { DatePipe } from '@angular/common';
 
 @Injectable()
 export class Globals {
-    //public BASE_USER_ENDPOINT = 'http://localhost:63428/';
-    public BASE_USER_ENDPOINT = 'http://saharanit8826hot-001-site1.itempurl.com/';
+    public BASE_USER_ENDPOINT = 'http://localhost:63428/';
+    //public BASE_USER_ENDPOINT = 'http://saharanit8826hot-001-site1.itempurl.com/';
     public page = 1;
     public pageSize = 10;
 
