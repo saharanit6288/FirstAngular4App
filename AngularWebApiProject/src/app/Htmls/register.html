@@ -1,0 +1,45 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">{{Title}}</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div *ngIf="msg" style="padding: 5px 0 0 15px;">
+                <h3>{{msg}}</h3>
+            </div>
+            <div style="padding: 5px 0 0 15px;" role="alert" *ngIf="isLoading">
+                <img src="../../images/loading.gif" width="32" height="32" /> Loading...
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form role="form" novalidate (ngSubmit)="register(rFrm)" [formGroup]="rFrm">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="E-mail*" name="email" type="email" formControlName="Email" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password*" name="password" type="password" formControlName="Password" value="">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Confirm Password*" name="confirmPassword" type="password" formControlName="ConfirmPassword" value="">
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <!--<a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>-->
+                            <button type="submit" class="btn btn-default btn-success" [disabled]="rFrm.invalid">Register</button>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

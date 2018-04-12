@@ -1,0 +1,19 @@
+First time migration:
+
+Enable-Migrations -MigrationsDirectory "Migrations\Migration_Main" -ContextTypeName VS2015_Angular2_Services.Models.ProjectDBContext
+Enable-Migrations -MigrationsDirectory "Migrations\Migration_Identity" -ContextTypeName VS2015_Angular2_Services.ApplicationDbContext
+
+
+
+Add New Migration:
+
+Add-Migration <purpose> -ProjectName VS2015_Angular2_Services -ConfigurationTypeName Configuration_Identity
+Add-Migration <purpose> -ProjectName VS2015_Angular2_Services -ConfigurationTypeName Configuration_Main
+
+
+
+Update Migration:
+
+Update-Database -ProjectName VS2015_Angular2_Services -ConfigurationTypeName Configuration_Identity
+Update-Database -ProjectName VS2015_Angular2_Services -ConfigurationTypeName Configuration_Main
+
